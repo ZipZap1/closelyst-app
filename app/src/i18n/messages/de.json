@@ -1,0 +1,67 @@
+{
+  "onboarding": {
+    "title": "Willkommen bei mach-das-mal",
+    "subtitle": "In 4 Schritten einsatzbereit. Erinnerungen sparen leere Stühle.",
+    "step1": {
+      "title": "Account & Praxis/Salon",
+      "name": "Name des Unternehmens",
+      "billingEmail": "Rechnungs-E-Mail",
+      "industry": "Branche",
+      "industryClinic": "Praxis",
+      "industrySalon": "Salon",
+      "industryOther": "Andere",
+      "dpaAck": "Ich habe die Auftragsverarbeitungs-Vereinbarung gelesen und akzeptiert.",
+      "submit": "Weiter"
+    },
+    "step2": {
+      "title": "Erster Standort",
+      "locationName": "Standort-Name",
+      "timezone": "Zeitzone",
+      "ownerName": "Dein Name (wird Inhaber*in)",
+      "submit": "Weiter"
+    },
+    "step3": {
+      "title": "Terminquelle",
+      "description": "Woher sollen wir deine Termine beziehen?",
+      "manual": "Manuell eingeben",
+      "csv": "CSV-Import",
+      "ical": "iCal-Feed (URL)",
+      "later": "Später einrichten",
+      "feedUrl": "iCal-URL",
+      "submit": "Weiter"
+    },
+    "step5": {
+      "title": "Erinnerungs-Kadenz",
+      "window24h": "24 Stunden vorher",
+      "window2h": "2 Stunden vorher",
+      "channelWa": "WhatsApp bevorzugen",
+      "channelSms": "Nur SMS",
+      "waitlist": "Warteliste aktivieren",
+      "submit": "Fertigstellen"
+    },
+    "done": {
+      "title": "Bereit!",
+      "message": "Dein Account ist eingerichtet. Im nächsten Schritt richten wir den WhatsApp-Absender ein.",
+      "cta": "Zum Dashboard"
+    },
+    "errors": {
+      "required": "Pflichtfeld",
+      "invalidEmail": "Ungültige E-Mail",
+      "invalidUrl": "Ungültige URL",
+      "dpaRequired": "DPA-Bestätigung erforderlich für Praxen",
+      "generic": "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+    }
+  },
+  "integrations": {
+    "title": "Integrationen",
+    "subtitle": "Terminquellen dieses Mandanten.",
+    "adapter": "Adapter",
+    "location": "Standort",
+    "lastSynced": "Zuletzt synchronisiert",
+    "lastError": "Letzter Fehler",
+    "syncNow": "Jetzt synchronisieren",
+    "disconnect": "Trennen",
+    "empty": "Noch keine Integrationen konfiguriert.",
+    "never": "noch nie"
+  }
+}

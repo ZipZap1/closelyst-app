@@ -21,7 +21,9 @@ export const tenant = pgTable("tenant", {
   name: text("name").notNull(),
   billingEmail: citext("billing_email").notNull(),
   locale: localeCode("locale").notNull().default("de"),
+  industry: text("industry").notNull().default("other"),
   subscriptionStatus: text("subscription_status").notNull().default("trialing"),
+  settings: jsonb("settings").notNull().default(sql`'{}'::jsonb`),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   deletedAt: timestamp("deleted_at", { withTimezone: true })
