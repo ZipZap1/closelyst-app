@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de-DE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mach das mal – Angebote nachfassen, ohne dran zu denken</title>
+    <meta
+      name="description"
+      content="Mach das mal hilft Handwerksbetrieben, Angebote automatisch nachzufassen und mehr Aufträge abzuschließen. Jetzt für die Beta vormerken."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Mach das mal</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="#funktionen">Funktionen</a>
+        <a href="#warteliste">Warteliste</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Für Handwerksbetriebe</p>
+        <h1>Angebote nachfassen, ohne dran zu denken.</h1>
+        <p class="lede">
+          Mach das mal nimmt dir das Hinterhertelefonieren ab: Du schickst
+          Angebote raus, wir kümmern uns um Erinnerungen, Status und Abschluss –
+          per E‑Mail, im Kanban, auf Deutsch.
+        </p>
+        <a class="cta" href="#warteliste">Auf die Warteliste</a>
+      </section>
+
+      <section id="funktionen" class="features">
+        <h2>Was du bekommst</h2>
+        <ul class="feature-grid">
+          <li>
+            <h3>Angebote als PDF</h3>
+            <p>Saubere PDFs in deinem Briefpapier – aus jeder Anfrage in zwei Klicks.</p>
+          </li>
+          <li>
+            <h3>Automatisches Nachfassen</h3>
+            <p>Freundliche Erinnerungen per E‑Mail, im Tonfall, der zu dir passt.</p>
+          </li>
+          <li>
+            <h3>Kanban statt Zettelwirtschaft</h3>
+            <p>Lead → Angebot → Nachfassen → Abschluss. Auf einen Blick, fürs ganze Team.</p>
+          </li>
+          <li>
+            <h3>Hosting in der EU</h3>
+            <p>Daten in der Europäischen Union, AV‑Vertrag inklusive.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="warteliste" class="waitlist">
+        <h2>Sei bei der Beta dabei</h2>
+        <p>
+          Wir starten in den nächsten Wochen mit ausgewählten Betrieben. Trag
+          deine E‑Mail ein – wir melden uns, sobald dein Platz frei ist.
+        </p>
+        <form id="waitlist-form" novalidate>
+          <label for="email">E‑Mail‑Adresse</label>
+          <div class="row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="name@betrieb.de"
+            />
+            <button type="submit">Vormerken</button>
+          </div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Mach das mal</p>
+      <nav aria-label="Rechtliches">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </nav>
+    </footer>
+
+    <script src="./waitlist.js" defer></script>
+  </body>
+</html>
