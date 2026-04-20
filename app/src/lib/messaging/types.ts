@@ -1,5 +1,6 @@
 export type MessagingChannel = "whatsapp" | "sms";
 export type ReplyAction = "confirm" | "cancel" | "noop";
+export type MessagingProviderName = "fake" | "meta";
 
 export interface SendRequest {
   to: string;
@@ -12,7 +13,7 @@ export interface SendRequest {
 
 export interface SendResult {
   ok: true;
-  provider: "fake";
+  provider: MessagingProviderName;
   providerMessageId: string;
   channel: MessagingChannel;
   to: string;
@@ -21,7 +22,7 @@ export interface SendResult {
 
 export interface SendFailure {
   ok: false;
-  provider: "fake";
+  provider: MessagingProviderName;
   error: string;
 }
 
@@ -53,6 +54,6 @@ export interface InboundLogEntry extends InboundResult {
 }
 
 export interface MessagingProvider {
-  readonly name: "fake";
+  readonly name: MessagingProviderName;
   send(req: SendRequest): Promise<SendResult | SendFailure>;
 }
