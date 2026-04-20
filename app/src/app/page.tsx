@@ -29,16 +29,25 @@ export default function HomePage() {
         <li>
           <Link href="/app/settings/integrations">Integrationen verwalten</Link>
         </li>
+        <li>
+          <Link href="/app/messaging-log">Messaging-Log (Fake-Provider)</Link> —
+          Outbound + Inbound live sehen
+        </li>
       </ul>
 
-      <h2 style={{ marginTop: "2rem" }}>API-Stubs</h2>
+      <h2 style={{ marginTop: "2rem" }}>API (Fake-Provider, In-Memory)</h2>
       <ul>
         <li>
-          <code>POST /api/messaging/send</code> — Platzhalter
-          (Messaging-Tranche folgt)
+          <code>POST /api/messaging/send</code> — <code>{"{ to, channel, body }"}</code>{" "}
+          → 202 mit <code>providerMessageId</code>
         </li>
         <li>
-          <code>POST /api/messaging/inbound</code> — BSP/SMS Webhook-Receiver
+          <code>POST /api/messaging/inbound</code> —{" "}
+          <code>{"{ from, channel, body }"}</code> → normalisiert JA/NEIN →{" "}
+          <code>{"{ normalizedAction }"}</code>
+        </li>
+        <li>
+          <code>GET /api/messaging/log</code> / <code>DELETE</code> zum Reset
         </li>
       </ul>
 

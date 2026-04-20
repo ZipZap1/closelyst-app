@@ -8,9 +8,14 @@ export default function AppLandingPage() {
         Dein Onboarding ist abgeschlossen. WhatsApp-Absender &amp; Template-Test stehen als nächster
         Schritt nach dem Messaging-Tranche an.
       </p>
-      <p>
-        <Link href="/app/settings/integrations">Integrationen verwalten</Link>
-      </p>
+      <ul>
+        <li>
+          <Link href="/app/settings/integrations">Integrationen verwalten</Link>
+        </li>
+        <li>
+          <Link href="/app/messaging-log">Messaging-Log (Fake-Provider)</Link>
+        </li>
+      </ul>
     </main>
   );
 }

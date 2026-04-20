@@ -1,17 +1,32 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { getMessagingProvider } from "../../../../lib/messaging/registry";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-/**
- * Placeholder webhook for inbound BSP/SMS replies. The real implementation
- * (HMAC signature verification, reply parsing, booking-status fan-out) is
- * assigned to the engineer hire tracked on HAC-1 / HAC-8 and will land under
- * the scope of HAC-12 once that work is executed.
- */
-export async function POST(_req: Request) {
-  return NextResponse.json(
-    { accepted: false, reason: "messaging inbound not implemented" },
-    { status: 501 }
-  );
+const InboundSchema = z.object({
+  from: z.string().min(3),
+  channel: z.enum(["whatsapp", "sms"]).default("whatsapp"),
+  body: z.string().min(1).max(1600),
+  receivedAt: z.string().datetime().optional(),
+  meta: z.record(z.unknown()).optional()
+});
+
+export async function POST(req: Request) {
+  let payload: unknown;
+  try {
+    payload = await req.json();
+  } catch {
+    return NextResponse.json({ accepted: false, error: "invalid_json" }, { status: 400 });
+  }
+  const parsed = InboundSchema.safeParse(payload);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { accepted: false, error: "invalid_body", issues: parsed.error.flatten() },
+      { status: 400 }
+    );
+  }
+  const result = getMessagingProvider().handleInbound(parsed.data);
+  return NextResponse.json(result, { status: 202 });
 }
