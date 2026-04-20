@@ -12,7 +12,7 @@
 
   var input = form.querySelector('input[type="email"]');
   var button = form.querySelector('button[type="submit"]');
-  var STORAGE_KEY = "mdm.waitlist.v1";
+  var STORAGE_KEY = "closelyst.waitlist.v1";
 
   function setStatus(message, kind) {
     status.textContent = message;

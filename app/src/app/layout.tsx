@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export const metadata = {
-  title: "mach-das-mal",
+  title: "closelyst",
   description: "Termin-/No-Show Reduzierer für Praxen & Salons"
 };
 

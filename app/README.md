@@ -1,4 +1,4 @@
-# mach-das-mal — app
+# closelyst — app
 
 Next.js 15 scaffold for the salon/clinic no-show reducer. Sibling `../landing/` is the marketing page.
 

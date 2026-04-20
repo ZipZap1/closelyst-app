@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main className="container">
       <div className="card">
-        <h1>mach-das-mal</h1>
+        <h1>closelyst</h1>
         <p>
           Termin-/No-Show Reduzierer für Praxen &amp; Salons — WhatsApp &amp; SMS
           Reminder, Bestätigung, Warteliste.

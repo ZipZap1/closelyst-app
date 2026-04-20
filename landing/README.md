@@ -1,6 +1,6 @@
 # Landing (HAC-7 stub)
 
-Single static German landing page for **Mach das mal** with a waitlist email
+Single static German landing page for **closelyst** with a waitlist email
 capture. Built as a placeholder so we have something to point at while the
 real product stack (see HAC-2 proposal) is being approved.
 
@@ -9,7 +9,7 @@ real product stack (see HAC-2 proposal) is being approved.
 - `index.html` — `de-DE` page: hero, value prop, feature grid, waitlist form, footer.
 - `styles.css` — minimal warm/neutral theme, mobile-friendly, system font stack.
 - `waitlist.js` — client-side email validation; persists submissions to
-  `localStorage` under `mdm.waitlist.v1` until a real backend exists.
+  `localStorage` under `closelyst.waitlist.v1` until a real backend exists.
 
 ## Run locally
 
