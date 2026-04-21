@@ -22,9 +22,7 @@ export const DATENSCHUTZ_HTML = `<h1>Datenschutz&shy;erkl&auml;rung</h1>
 
 <h3>Hinweis zur verantwortlichen Stelle</h3> <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p> <p>Haci Ibrahim Dogan<br />Holunderweg 3<br />44869 Bochum<br />Deutschland</p>
 
-<p>Telefon: &#91;Telefonnummer der verantwortlichen Stelle&#93;<br />
-
-E-Mail: &#91;E-Mail-Adresse der verantwortlichen Stelle&#93;</p>
+<p>E-Mail: <a href="mailto:info@closelyst.com">info@closelyst.com</a></p>
 
 &#x20;<p>Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.</p>
 
