@@ -66,6 +66,10 @@ export default function HomePage() {
       <p className="text-muted text-center mt-lg">
         MVP-Stand: Onboarding-Wizard, Booking-Adapter (iCal/CSV/Manual), Drizzle-Schema, Fake-Messaging, In-Memory-Reminder-Scheduler
       </p>
+
+      <p className="text-muted text-center" style={{ fontSize: "0.85rem", marginTop: "1rem" }}>
+        <Link href="/datenschutz">Datenschutzerklärung</Link>
+      </p>
     </main>
   );
 }
